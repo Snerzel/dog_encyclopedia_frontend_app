@@ -13,7 +13,10 @@ function getBreeds() {
     .then(response => response.json())
     .then(breeds => {
         breeds.data.forEach(breed => {
-            renderBreeds(breed)
+
+            let newBreed = new Breed(breed, breed.attributes)
+            document.querySelector('#breed-container').innerHTML += newBreed.renderBreeds();
+            // renderBreeds(breed)
                 
 
         })
@@ -31,19 +34,7 @@ function addBreedHandler(e) {
   postBreed(nameInput, imageInput, infoInput, groupId)
 }
 
-function renderBreeds(breed) {
-    const breedMarkup = `
-                <div data-id=${breed.id}> 
-                <img src=${breed.attributes.image_url} height="400" width="600">
-                    <h3>${breed.attributes.name}</h3>
-                    <p>${breed.attributes.group.name}</p>
-                    <p>${breed.attributes.info}</p>
-                    <button data-id=${breed.id}>edit</button>
-                </div>
-                <br></br>`;
 
-                document.querySelector('#breed-container').innerHTML += breedMarkup
-}
 
 function postBreed(name, image_url, info, group_id) {
     console.log(name, image_url, info, group_id)
@@ -63,7 +54,8 @@ function postBreed(name, image_url, info, group_id) {
     .then(response => response.json())
     .then(breed => {
          const breedData = breed.data
-        renderBreeds(breedData)
+         let newBreed = new Breed(breedData, breedData.attributes)
+         document.querySelector('#breed-container').innerHTML += newBreed.renderBreeds();
 
     })
 }
