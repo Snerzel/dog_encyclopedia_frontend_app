@@ -7,6 +7,37 @@
         <script type="text/javascript" src="index.js"></script>
     </head>
     <body>
+
+        <div class="form-container">
+
+            <form id="add-breed-form" style="">
+            
+                    <h3>Add a Breed!!!</h3>
+                
+                    <input id='input-name' type="text" name="name" value="" placeholder="Enter breed name..." class="input-text">
+                    <br><br>
+                    <textarea id='input-info' name="info" rows="8" cols="80" value="" placeholder="Enter breed info..."></textarea>
+                    <br><br>
+                    <input id='input-image' type="text" name="image" value="" placeholder="Enter breed image URL..." class="input-text">
+                    <br><br>
+                
+                    <select id="groups" name="groups">
+                      <option value="1">Sporting</option>
+                      <option value="2">Hound</option>
+                      <option value="3">Working</option>
+                      <option value="4">Terrier</option>
+                      <option value="5">Toy</option>
+                      <option value="6">Non-Sporting</option>
+                      <option value="7">Herding</option>
+                    </select>
+                    <br><br>
+                
+                    <input id= 'create-button' type="submit" name="submit" value="Add Breed" class="submit">
+                  </form>
+            </form>
+
+        </div>
+
         <div id="breed-container">
 
         </div>
