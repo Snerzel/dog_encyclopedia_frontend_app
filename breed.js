@@ -18,7 +18,7 @@ renderBreeds() {
                     <h3>${this.name}</h3>
                     <p>${this.group.name}</p>
                     <p>${this.info}</p>
-                    <button data-id=${this.id}>edit</button>
+                   
                 </div>
                 <br></br>`;
 
