@@ -19,9 +19,9 @@ renderBreeds() {
                     <h3>${this.name}</h3>
                     <p>${this.group.name}</p>
                     <p>${this.info}</p>
-                    <p>Likes: ${this.likes}</p>
-                    <button class="like-btn">Like</button>
-                    <button class="delete-btn">Delete</button>
+                    <p>${this.likes}: Likes </p>
+                    <button data-id="${this.id}" class="like-btn">Like</button>
+                    <button data-id="${this.id}" class="delete-btn">Delete</button>
                 </div>
                 <br></br>`;
 
